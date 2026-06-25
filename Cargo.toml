@@ -1,0 +1,19 @@
+[package]
+name = "html_unescape"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "html_unescape"
+crate-type = ["cdylib"]
+
+[dependencies]
+polars = { version = "0.46", default-features = false, features = ["strings"] }
+pyo3 = { version = "0.22", features = ["extension-module", "abi3-py38"] }
+pyo3-polars = { version = "0.18", features = ["derive"] }
+html-escape = "0.2"
+
+[profile.release]
+codegen-units = 1
+lto = true
+strip = true

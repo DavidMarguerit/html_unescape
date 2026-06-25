@@ -1,0 +1,13 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "html_unescape"
+version = "0.1.0"
+requires-python = ">=3.8"
+dependencies = ["polars>=0.46"]
+
+[tool.maturin]
+module-name = "html_unescape.html_unescape"
+features = ["pyo3/extension-module"]
