@@ -6,7 +6,7 @@ build-backend = "maturin"
 name = "html_unescape"
 version = "0.1.0"
 requires-python = ">=3.8"
-dependencies = ["polars>=0.46"]
+dependencies = ["polars>=0.44"]
 
 [tool.maturin]
 module-name = "html_unescape.html_unescape"
